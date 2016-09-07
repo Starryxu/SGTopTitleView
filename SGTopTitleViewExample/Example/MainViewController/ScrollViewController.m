@@ -64,7 +64,8 @@
     
     TestOneVC *oneVC = [[TestOneVC alloc] init];
     [self.mainScrollView addSubview:oneVC.view];
-    
+    [self addChildViewController:oneVC];
+
     [self.view insertSubview:_mainScrollView belowSubview:_topTitleView];
 }
 

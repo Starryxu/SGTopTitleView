@@ -71,7 +71,8 @@
     
     TestOneVC *oneVC = [[TestOneVC alloc] init];
     [self.mainScrollView addSubview:oneVC.view];
-    
+    [self addChildViewController:oneVC];
+
 }
 
 #pragma mark - - - SGTopScrollMenu代理方法
