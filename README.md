@@ -1,11 +1,14 @@
 
 ## a top title view, according to the title of a number of automatic adaptation content
+
 ### 顶部滚动视图（APP中常见顶部滚动视图，使用UIScrollView进行封装，使用起来极其简单、实用、方便）
 
 ![](https://github.com/kingsic/SGTopTitleView/raw/master/Gif/Untitled.gif)
 
 #### * `静止状态下标题按钮的创建`<br>
+
 #### * `滚动状态下标题按钮的创建`<br>
+
 #### * `导航栏上标题按钮的创建`<br>
 
 * SGTopTitleView使用方法一：
