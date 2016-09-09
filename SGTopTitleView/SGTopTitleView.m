@@ -288,6 +288,37 @@ static CGFloat const indicatorHeight = 3;
 }
 
 
+#pragma mark - - - 给外界ScrollView提供的方法
+- (void)scrollTitleLabelChangeTextColorFadeScrollView:(UIScrollView *)scrollView {
+    
+    // 当前Label的位置
+    CGFloat currentPage = scrollView.contentOffset.x / scrollView.bounds.size.width;
+    
+    // 左边label下标
+    NSInteger leftIndex = currentPage;
+    // 右边的label下标
+    NSInteger rightIndex = leftIndex + 1;
+    
+    // 获取左边的label
+    UILabel *leftLabel = self.allTitleLabel[leftIndex];
+    
+    // 获取右边的label
+    UILabel *rightLabel;
+    if (rightIndex < self.allTitleLabel.count - 1) {
+        rightLabel = self.allTitleLabel[rightIndex];
+    }
+    
+    // 计算下右边缩放比例
+    CGFloat rightScale = currentPage - leftIndex;
+    
+    // 计算下左边缩放比例
+    CGFloat leftScale = 1 - rightScale;
+    
+    // 设置文字颜色渐变
+    leftLabel.textColor = [UIColor colorWithRed:leftScale green:0 blue:0 alpha:1]; // R G B 黑色 0 0 0
+    rightLabel.textColor = [UIColor colorWithRed:rightScale green:0 blue:0 alpha:1]; // R G B 红色 1 0 0
+}
+
 
 @end
 

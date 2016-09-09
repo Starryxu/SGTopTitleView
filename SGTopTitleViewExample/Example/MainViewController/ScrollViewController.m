@@ -151,6 +151,11 @@
     [self.topTitleView scrollTitleLabelSelectededCenter:selLabel];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.topTitleView scrollTitleLabelChangeTextColorFadeScrollView:scrollView];
+}
+
+
 @end
 
 

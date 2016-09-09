@@ -39,5 +39,8 @@
 /** 滚动标题选中居中 */
 - (void)scrollTitleLabelSelectededCenter:(UILabel *)centerLabel;
 
+#pragma mark - - - 给外界ScrollView提供的方法
+/** 滚动ScrollView, 让文字呈现渐显效果, 给外界ScrollView的scrollViewDidScroll方法提供的方法*/
+- (void)scrollTitleLabelChangeTextColorFadeScrollView:(UIScrollView *)scrollView;
 
 @end
