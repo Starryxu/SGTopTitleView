@@ -19,6 +19,14 @@
 
   * 通过alloc、initWithFrame或者类方法topTitleViewWithFrame去创建
 
+  * _topTitleView.staticTitleArr = [NSArray arrayWithArray:_titles]; // 静态数组标题的设置
+ 
+  * _topTitleView.scrollTitleArr = [NSArray arrayWithArray:_titles]; // 动态数组标题的设置
+ 
+  * _topTitleView.isHiddenIndicator = YES; // 默认为NO, 不隐藏
+ 
+  * _topTitleView.titleAndIndicatorColor = [UIColor purpleColor]; // 默认为红色
+ 
   * 遵循SGTopTitleViewDelegate协议的delegate_SG方法
   ```Objective-C
   - (void)SGTopTitleView:(SGTopTitleView *)topTitleView didSelectTitleAtIndex:(NSInteger)index；
