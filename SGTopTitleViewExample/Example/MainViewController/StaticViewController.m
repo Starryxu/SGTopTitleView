@@ -37,7 +37,7 @@
     // , @"NBA", @"新闻", @"娱乐", @"音乐", @"网络电影"
     self.topTitleView = [SGTopTitleView topTitleViewWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 44)];
     _topTitleView.staticTitleArr = [NSArray arrayWithArray:_titles];
-    
+    _topTitleView.isHiddenIndicator = YES;
     _topTitleView.delegate_SG = self;
     [self.view addSubview:_topTitleView];
     

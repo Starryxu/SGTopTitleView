@@ -43,7 +43,7 @@
     // , @"NBA", @"新闻", @"娱乐", @"音乐", @"网络电影"
     self.topTitleView = [SGTopTitleView topTitleViewWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 44)];
     _topTitleView.scrollTitleArr = [NSArray arrayWithArray:_titles];
-    
+    _topTitleView.titleAndIndicatorColor = [UIColor purpleColor];
     _topTitleView.delegate_SG = self;
     [self.view addSubview:_topTitleView];
     
@@ -149,10 +149,6 @@
     [self.topTitleView scrollTitleLabelSelecteded:selLabel];
     // 3.让选中的标题居中
     [self.topTitleView scrollTitleLabelSelectededCenter:selLabel];
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self.topTitleView scrollTitleLabelChangeTextColorFadeScrollView:scrollView];
 }
 
 

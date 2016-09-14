@@ -25,6 +25,12 @@
 @property (nonatomic, strong) NSArray *scrollTitleArr;
 /** 存入所有Label */
 @property (nonatomic, strong) NSMutableArray *allTitleLabel;
+
+#pragma mark - - - 以下属性一定要设置在 -> 标题数组 <- 之后, 否则无效果
+/** 文字以及指示器颜色设置(默认为红色)*/
+@property (nonatomic, strong) UIColor *titleAndIndicatorColor;
+/** 是否隐藏指示器(默认为NO) 指示器的宽度是根据标题内容的宽度变化而变化的, 所以设置这个属性一定要在 -> 标题数组属性之后 */
+@property (nonatomic, assign) BOOL isHiddenIndicator;
 @property (nonatomic, weak) id<SGTopTitleViewDelegate> delegate_SG;
 
 /** 类方法 */
@@ -39,8 +45,5 @@
 /** 滚动标题选中居中 */
 - (void)scrollTitleLabelSelectededCenter:(UILabel *)centerLabel;
 
-#pragma mark - - - 给外界ScrollView提供的方法
-/** 滚动ScrollView, 让文字呈现渐显效果, 给外界ScrollView的scrollViewDidScroll方法提供的方法*/
-- (void)scrollTitleLabelChangeTextColorFadeScrollView:(UIScrollView *)scrollView;
 
 @end
