@@ -3,7 +3,7 @@
 
 ### 顶部滚动视图（APP中常见顶部滚动视图，使用UIScrollView进行封装，使用起来极其简单、实用、方便）
 
-![](https://github.com/kingsic/SGTopTitleView/raw/master/Gif/Untitled.gif)
+![](https://github.com/kingsic/SGTopTitleView/raw/master/Gif/sorgle.gif)
 
 #### * `静止状态下标题按钮的创建`<br>
 
@@ -24,7 +24,9 @@
   * _topTitleView.scrollTitleArr = [NSArray arrayWithArray:_titles]; // 动态数组标题的设置
  
   * _topTitleView.isHiddenIndicator = YES; // 默认为NO, 不隐藏
- 
+
+  * _topTitleView.showsTitleBackgroundIndicatorStyle = YES; // 默认指示器样式在标题文字下方, 设置之后指示器在标题文字后方
+
   * _topTitleView.titleAndIndicatorColor = [UIColor purpleColor]; // 默认为红色
  
   * 遵循SGTopTitleViewDelegate协议的delegate_SG方法
