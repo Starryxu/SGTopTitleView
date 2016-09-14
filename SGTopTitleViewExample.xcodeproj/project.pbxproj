@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96D3F39A1D89C43600B39C12 /* ScrollViewController_Two.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D3F3991D89C43600B39C12 /* ScrollViewController_Two.m */; };
 		DF05A1C31D6DF07500A1BD10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF05A1C21D6DF07500A1BD10 /* main.m */; };
 		DF05A1C61D6DF07500A1BD10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF05A1C51D6DF07500A1BD10 /* AppDelegate.m */; };
 		DF05A1C91D6DF07500A1BD10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF05A1C81D6DF07500A1BD10 /* ViewController.m */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96D3F3981D89C43600B39C12 /* ScrollViewController_Two.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewController_Two.h; sourceTree = "<group>"; };
+		96D3F3991D89C43600B39C12 /* ScrollViewController_Two.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController_Two.m; sourceTree = "<group>"; };
 		DF05A1BE1D6DF07500A1BD10 /* SGTopTitleViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGTopTitleViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF05A1C21D6DF07500A1BD10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DF05A1C41D6DF07500A1BD10 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -249,6 +252,8 @@
 				DF05A23B1D6E0E6D00A1BD10 /* StaticViewController.m */,
 				DF05A2381D6E0E6D00A1BD10 /* ScrollViewController.h */,
 				DF05A2391D6E0E6D00A1BD10 /* ScrollViewController.m */,
+				96D3F3981D89C43600B39C12 /* ScrollViewController_Two.h */,
+				96D3F3991D89C43600B39C12 /* ScrollViewController_Two.m */,
 				DF05A2361D6E0E6D00A1BD10 /* MainViewController.h */,
 				DF05A2371D6E0E6D00A1BD10 /* MainViewController.m */,
 			);
@@ -400,6 +405,7 @@
 				DF05A21B1D6DF86B00A1BD10 /* TestFiveVC.m in Sources */,
 				DF05A1C61D6DF07500A1BD10 /* AppDelegate.m in Sources */,
 				DF05A1C31D6DF07500A1BD10 /* main.m in Sources */,
+				96D3F39A1D89C43600B39C12 /* ScrollViewController_Two.m in Sources */,
 				DF05A2261D6DF8EC00A1BD10 /* TestEightVC.m in Sources */,
 				DF05A1FA1D6DF43300A1BD10 /* UIView+SGExtension.m in Sources */,
 				DF05A23D1D6E0E6D00A1BD10 /* ScrollViewController.m in Sources */,

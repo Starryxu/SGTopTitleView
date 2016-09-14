@@ -31,6 +31,9 @@
 @property (nonatomic, strong) UIColor *titleAndIndicatorColor;
 /** 是否隐藏指示器(默认为NO) 指示器的宽度是根据标题内容的宽度变化而变化的, 所以设置这个属性一定要在 -> 标题数组属性之后 */
 @property (nonatomic, assign) BOOL isHiddenIndicator;
+/** 背景指示器样式(默认指示器在标题文字下方, 设置此属性指示器显示在文字后方) */
+@property (nonatomic, assign) BOOL showsTitleBackgroundIndicatorStyle;
+
 @property (nonatomic, weak) id<SGTopTitleViewDelegate> delegate_SG;
 
 /** 类方法 */

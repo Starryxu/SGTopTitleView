@@ -265,10 +265,17 @@ static CGFloat const indicatorHeight = 2;
     _selectedTitleLabel = label;
     
     // 改变指示器位置
-    [UIView animateWithDuration:0.20 animations:^{
-        self.indicatorView.SG_width = label.SG_width - 2 * labelMargin;
-        self.indicatorView.SG_centerX = label.SG_centerX;
-    }];
+    if (_showsTitleBackgroundIndicatorStyle == YES) {
+        [UIView animateWithDuration:0.20 animations:^{
+            self.indicatorView.SG_width = label.SG_width - labelMargin;
+            self.indicatorView.SG_centerX = label.SG_centerX;
+        }];
+    } else {
+        [UIView animateWithDuration:0.20 animations:^{
+            self.indicatorView.SG_width = label.SG_width - 2 * labelMargin;
+            self.indicatorView.SG_centerX = label.SG_centerX;
+        }];
+    }
 }
 
 /** 滚动标题选中居中 */
@@ -291,7 +298,6 @@ static CGFloat const indicatorHeight = 2;
 #pragma mark - - - setter
 - (void)setIsHiddenIndicator:(BOOL)isHiddenIndicator {
     if (isHiddenIndicator == YES) {
-        self.indicatorView.SG_height = 0;
         [self.indicatorView removeFromSuperview];
     }
 }
@@ -305,6 +311,40 @@ static CGFloat const indicatorHeight = 2;
     }
     _indicatorView.backgroundColor = titleAndIndicatorColor;
 }
+
+- (void)setShowsTitleBackgroundIndicatorStyle:(BOOL)showsTitleBackgroundIndicatorStyle {
+    _showsTitleBackgroundIndicatorStyle = showsTitleBackgroundIndicatorStyle;
+    
+    if (showsTitleBackgroundIndicatorStyle == YES) {
+        
+        [self.indicatorView removeFromSuperview];
+        
+        // 取出第一个子控件
+        UILabel *firstLabel = self.subviews.firstObject;
+        
+        // 添加指示器
+        self.indicatorView = [[UIView alloc] init];
+        _indicatorView.backgroundColor = selectedTitleAndIndicatorViewColor;
+        _indicatorView.SG_height = indicatorHeight;
+        _indicatorView.SG_y = self.frame.size.height - indicatorHeight;
+        [self addSubview:_indicatorView];
+        
+        // 指示器默认在第一个选中位置
+        // 计算TitleLabel内容的Size
+        CGSize labelSize = [self sizeWithText:firstLabel.text font:labelFontOfSize maxSize:CGSizeMake(MAXFLOAT, self.frame.size.height)];
+        _indicatorView.SG_width = labelSize.width + labelMargin;
+        _indicatorView.SG_centerX = firstLabel.SG_centerX;
+        
+        CGFloat indicatorViewHeight = 25;
+        self.indicatorView.SG_height = indicatorViewHeight;
+        self.indicatorView.SG_y = (self.frame.size.height - indicatorViewHeight) * 0.5;
+    }
+    
+    self.indicatorView.alpha = 0.3;
+    self.indicatorView.layer.cornerRadius = 5;
+    self.indicatorView.layer.masksToBounds = YES;
+}
+
 
 @end
 

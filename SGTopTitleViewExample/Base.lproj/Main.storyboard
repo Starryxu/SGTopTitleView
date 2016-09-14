@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XGK-ZC-Skv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XGK-ZC-Skv">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SGTopTitleView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -37,13 +37,13 @@
                                     <constraint firstAttribute="width" constant="150" id="3q0-g6-5a0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="scrollTitle"/>
+                                <state key="normal" title="scrollTitle - one"/>
                                 <connections>
-                                    <action selector="scrollTitleView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jXn-Yz-oCd"/>
+                                    <action selector="scrollTitleView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uU5-5c-JNj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yH-rI-QYq">
-                                <rect key="frame" x="225" y="327" width="150" height="33"/>
+                                <rect key="frame" x="225" y="410" width="150" height="33"/>
                                 <color key="backgroundColor" red="1" green="0.80584417500000005" blue="0.37902437550000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="dwF-13-oo0"/>
@@ -54,6 +54,18 @@
                                     <action selector="navigationBarTitleView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rcf-bJ-fye"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itV-c6-eEi">
+                                <rect key="frame" x="225" y="327" width="150" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.80584417500000005" blue="0.37902437550000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="8C6-x9-jXn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="scrollTitle - two"/>
+                                <connections>
+                                    <action selector="scrollTitleView_two:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pew-d3-hMv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -62,10 +74,18 @@
                             <constraint firstItem="xBe-FI-52H" firstAttribute="top" secondItem="Xfp-06-eD6" secondAttribute="bottom" constant="50" id="UsB-6k-82s"/>
                             <constraint firstItem="Xfp-06-eD6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eCP-nW-WuM"/>
                             <constraint firstItem="xBe-FI-52H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o4c-c9-K5k"/>
+                            <constraint firstItem="itV-c6-eEi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="psq-aa-ibO"/>
                             <constraint firstItem="Xfp-06-eD6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="wuX-ch-Yji"/>
+                            <constraint firstItem="itV-c6-eEi" firstAttribute="top" secondItem="xBe-FI-52H" secondAttribute="bottom" constant="50" id="xyQ-oE-PaZ"/>
+                            <constraint firstItem="1yH-rI-QYq" firstAttribute="top" secondItem="itV-c6-eEi" secondAttribute="bottom" constant="50" id="yXV-Rv-jMG"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="27s-SF-dq5"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="DEI-mj-46w"/>
+                    <navigationItem key="navigationItem" title="SGTopTitleView" id="DEI-mj-46w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

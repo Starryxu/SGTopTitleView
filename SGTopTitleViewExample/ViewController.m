@@ -12,6 +12,7 @@
 #import "ViewController.h"
 #import "StaticViewController.h"
 #import "ScrollViewController.h"
+#import "ScrollViewController_Two.h"
 #import "MainViewController.h"
 
 @interface ViewController ()
@@ -32,6 +33,11 @@
 
 - (IBAction)scrollTitleView:(id)sender {
     ScrollViewController *scrollVC = [[ScrollViewController alloc] init];
+    [self.navigationController pushViewController:scrollVC animated:YES];
+}
+
+- (IBAction)scrollTitleView_two:(id)sender {
+    ScrollViewController_Two *scrollVC = [[ScrollViewController_Two alloc] init];
     [self.navigationController pushViewController:scrollVC animated:YES];
 }
 
