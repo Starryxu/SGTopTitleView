@@ -17,6 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_image" translatesAutoresizingMaskIntoConstraints="NO" id="AHv-l8-ixU">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfp-06-eD6">
                                 <rect key="frame" x="225" y="164" width="150" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.80584417500000005" blue="0.37902437550000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -70,9 +73,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1yH-rI-QYq" firstAttribute="top" secondItem="xBe-FI-52H" secondAttribute="bottom" constant="50" id="27s-SF-dq5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AHv-l8-ixU" secondAttribute="bottom" id="8Nk-0s-Lii"/>
                             <constraint firstItem="1yH-rI-QYq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jpy-5q-mey"/>
+                            <constraint firstAttribute="trailing" secondItem="AHv-l8-ixU" secondAttribute="trailing" id="MU6-8a-Z7e"/>
                             <constraint firstItem="xBe-FI-52H" firstAttribute="top" secondItem="Xfp-06-eD6" secondAttribute="bottom" constant="50" id="UsB-6k-82s"/>
+                            <constraint firstItem="AHv-l8-ixU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Wm0-rI-eRF"/>
                             <constraint firstItem="Xfp-06-eD6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eCP-nW-WuM"/>
+                            <constraint firstItem="AHv-l8-ixU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lys-cs-JMK"/>
                             <constraint firstItem="xBe-FI-52H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o4c-c9-K5k"/>
                             <constraint firstItem="itV-c6-eEi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="psq-aa-ibO"/>
                             <constraint firstItem="Xfp-06-eD6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="wuX-ch-Yji"/>
@@ -110,4 +117,7 @@
             <point key="canvasLocation" x="335" y="1049"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg_image" width="350" height="622"/>
+    </resources>
 </document>
